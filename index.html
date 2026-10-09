@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Ashu ❤️</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --paper:#f4ecdf;--paper2:#eee3d2;--brown:#624535;--brown2:#7d5744;
+  --accent:#ad684a;--soft:#e7d8c4;--white:#fffaf2;
+}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,"Times New Roman",serif;background:var(--paper);color:var(--brown);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;z-index:50;background-image:radial-gradient(#8f765e 0.7px,transparent .8px);background-size:7px 7px}
+button,a{font:inherit}
+a{text-decoration:none;color:inherit}
+
+.sidebar{
+ position:fixed;left:0;top:0;width:294px;height:100vh;background:#f3eadc;
+ border-right:1px solid #dfd0bc;padding:30px 18px 20px;z-index:100;
+ display:flex;flex-direction:column
+}
+.brand{text-align:center;margin:8px 0 30px}
+.brand .cake{font-size:34px;margin-bottom:8px}
+.brand h1{font-size:27px;font-style:italic;font-weight:500;line-height:1.1}
+.brand .small{font-size:19px;color:#bd7658;margin-top:9px;font-style:italic}
+.nav{display:flex;flex-direction:column;gap:6px}
+.nav button{
+ border:0;background:transparent;color:#8b7768;text-align:left;padding:15px 16px;
+ border-radius:13px;cursor:pointer;font-size:18px;font-style:italic;display:flex;align-items:center;gap:15px
+}
+
+.nav button:hover,.nav button.active{background:#e6dac8;color:var(--brown)}
+.nav .dot{margin-left:auto;color:#b9785b;font-size:18px}
+.bottom{margin-top:auto}
+.edit,.publish{width:100%;padding:14px;border-radius:11px;background:transparent;border:1px solid #9d836d;cursor:pointer;color:#624535;font-size:18px;font-style:italic}
+.publish{margin-top:10px;background:#714936;color:white;border-color:#714936}
+.back{text-align:center;margin-top:22px;color:#9b8878;font-style:italic}
+
+main{margin-left:294px;min-height:100vh}
+.page{min-height:100vh;padding:35px 6vw 90px;position:relative}
+.hero{max-width:1100px;margin:auto;text-align:center}
+.flowers{position:absolute;pointer-events:none;opacity:.9;font-size:100px}
+.fl1{top:-25px;left:5%}.fl2{top:20px;right:10%}.fl3{bottom:2%;left:10%}.fl4{bottom:0;right:13%}
+.kicker{font-size:16px;letter-spacing:4px;margin-top:10px}
+.hero h2{font-size:76px;line-height:.95;margin-top:5px;font-weight:700;letter-spacing:2px}
+.hero .script{font-size:82px;color:#ae6849;font-style:italic;font-weight:400;display:block}
+.hero .name{font-size:21px;letter-spacing:3px;margin:20px 0 30px;font-weight:bold}
+.polaroid-wrap{position:relative;display:inline-block;margin-top:10px}
+/*.polaroid{width:390px;height:470px;object-fit:cover;border:7px solid white;box-shadow:0 5px 20px #806b5828;background:#c7b49f; background-image: url("images/ashuphoto.jpeg") !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;}*/
+    .polaroid.small1{width:335px;height:270px;object-fit:cover;box-shadow:0 5px 20px #806b5828; background-image: url("images/firstpage.jpg") !important;
+    background-size: 65%;
+    background-position: center 54%;
+    background-repeat: no-repeat;
+  transform: rotate(-87deg);}
+    
+    
+.polaroid.small{position:absolute;width:173px;height: 279px;border-width:6px;right:-122px;top:13px;transform:rotate(9deg);background-image: url("images/ashuphoto.jpeg"); background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;}
+.polaroid.small2{position:absolute;width:173px;height:279px;border-width:6px;left:-119px;bottom:-15px;transform:rotate(-17deg);
+background-image: url("images/manali.jpg");
+background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.message{max-width:620px;margin:24px auto;font-size:20px;line-height:1.65;font-style:italic}
+.heart{color:#ed315b}
+
+.section-title{text-align:center;font-size:52px;font-style:italic;margin:10px 0 8px}
+.section-sub{text-align:center;color:#ae775f;margin-bottom:35px}
+.gallery{max-width:950px;margin:auto;display:grid;grid-template-columns:2fr 1fr;gap:12px}
+.card{overflow:hidden;border-radius:17px;border:1px solid #d9c6af;background:#d8c4ad;min-height:180px;cursor:pointer}
+.card.big{grid-row:span 2;min-height:380px}
+.card img{width:100%;height:100%;object-fit:cover;display:block}
+.placeholder{
+ width:100%;height:100%;min-height:180px;display:flex;align-items:center;justify-content:center;
+ background:linear-gradient(135deg,#b8775c,#e3c9aa);color:white;font-size:20px;font-style:italic
+}
+.gallery-note{text-align:center;margin-top:45px;color:#a68e7a;font-style:italic}
+
+.song-box{max-width:800px;margin:auto;background:#eadfce;border:1px solid #d4c1aa;border-radius:22px;padding:25px;box-shadow:0 12px 35px #6d50301a}
+.now{display:flex;gap:18px;align-items:center;padding:15px;background:#f7f0e6;border-radius:16px}
+.album{width:85px;height:85px;border-radius:12px;background:linear-gradient(135deg,#a96549,#e6c5a7);display:flex;align-items:center;justify-content:center;font-size:32px}
+.now h3{font-size:24px;font-style:italic}
+.now p{color:#9a7965;margin-top:4px}
+.controls{display:flex;justify-content:center;align-items:center;gap:15px;margin:22px 0}
+.controls button{border:0;border-radius:50%;width:48px;height:48px;background:#7a503d;color:white;cursor:pointer;font-size:20px}
+.controls button.main{width:62px;height:62px;background:#ad684a}
+.progress{width:100%;accent-color:#ad684a}
+.playlist{margin-top:20px;display:flex;flex-direction:column;gap:7px}
+.track{display:flex;align-items:center;gap:14px;padding:13px 15px;border-radius:12px;cursor:pointer}
+.track:hover,.track.active{background:#e0d0bd}
+.track-num{width:25px;text-align:center}.track-info{flex:1}.track-info strong{display:block}.track-info span{font-size:13px;color:#9b7e6d}
+
+.game-wrap{max-width:750px;margin:auto;text-align:center}
+.game-card{background:#eadfce;border:1px solid #d7c4ad;border-radius:22px;padding:30px}
+#gameMsg{font-size:22px;font-style:italic;margin:20px}
+.game-btn{border:0;background:#ad684a;color:white;padding:13px 22px;border-radius:12px;cursor:pointer}
+.hearts{font-size:42px;line-height:1.6;letter-spacing:10px;user-select:none}
+.heart-game{cursor:pointer;display:inline-block;transition:.15s}.heart-game:hover{transform:scale(1.2)}
+
+.surprise-page{overflow:hidden}
+.scratch-area{max-width:820px;margin:20px auto 0;position:relative}
+.scratch-message{
+ background:#fffaf3;border-radius:20px;border:1px solid #d7c3aa;padding:55px 50px;
+ min-height:410px;text-align:center;box-shadow:0 10px 35px #6d50301c
+}
+.scratch-message h3{font-size:42px;font-style:italic;margin-bottom:20px;color:#7b4d39}
+.scratch-message p{font-size:20px;line-height:1.7;font-style:italic}
+#scratchCanvas{position:absolute;inset:0;width:100%;height:100%;border-radius:20px;cursor:crosshair;touch-action:none}
+.scratch-hint{text-align:center;margin-top:15px;color:#9b806c;font-style:italic}
+.reveal{margin-top:20px;text-align:center;opacity:0;transform:translateY(8px);transition:.5s}
+.reveal.show{opacity:1;transform:none}
+.reveal button{padding:12px 20px;border:1px solid #b78c72;background:#f7ecdd;border-radius:12px;cursor:pointer;color:#714936}
+
+.modal{position:fixed;inset:0;background:#2c201b99;display:none;align-items:center;justify-content:center;z-index:200;padding:20px}
+.modal.show{display:flex}
+.modal-box{background:#f5eadb;padding:28px;border-radius:18px;max-width:650px;width:100%;text-align:center}
+.modal-box img{max-width:100%;max-height:65vh;border-radius:12px}
+.close{margin-top:15px;padding:9px 20px;border:0;border-radius:10px;background:#714936;color:white;cursor:pointer}
+
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:180;overflow:hidden}
+.conf{position:absolute;top:-20px;opacity:.9;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+
+.toast{position:fixed;right:22px;bottom:22px;background:#704936;color:white;padding:13px 18px;border-radius:12px;z-index:300;display:none}
+
+@media(max-width:850px){
+ .sidebar{width:82px;padding:15px 8px}.brand h1,.brand .small,.brand .cake{font-size:0}.brand .cake:after{content:"🎂";font-size:30px}
+ .nav button{justify-content:center;padding:14px}.nav button span:not(.dot){display:none}.nav .dot{display:none}
+ .bottom .edit,.bottom .publish,.back{font-size:0}.bottom .edit:after{content:"✦";font-size:20px}.bottom .publish:after{content:"🎂";font-size:20px}
+ main{margin-left:82px}.page{padding:30px 20px 70px}.hero h2{font-size:50px}.hero .script{font-size:58px}.polaroid{width:290px;height:370px}.polaroid.small,.polaroid.small2{width:90px;height:95px}
+ .gallery{grid-template-columns:1fr}.card.big{grid-row:auto}.section-title{font-size:40px}
+}
+@media(max-width:520px){
+ .page{padding-left:13px;padding-right:13px}.hero h2{font-size:39px}.hero .script{font-size:45px}.hero .name{font-size:14px}
+ .polaroid{width:235px;height:300px}.message{font-size:17px}.scratch-message{padding:35px 22px}.scratch-message h3{font-size:31px}.scratch-message p{font-size:17px}
+}
+
+.family-grid{max-width:1050px;margin:auto;display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.family-card{background:#fffaf2;border:1px solid #d9c6af;border-radius:20px;overflow:hidden;box-shadow:0 10px 28px #6d50301a;transition:.2s}
+.family-card:hover{transform:translateY(-3px);box-shadow:0 15px 35px #6d503028}
+.family-card img{width:100%;height:280px;object-fit:cover;display:block}
+.family-caption{padding:20px 22px 24px}
+.family-caption h3{font-size:27px;font-style:italic;margin-bottom:9px;color:#714936}
+.family-caption p{font-size:17px;line-height:1.6;color:#8c7464}
+@media(max-width:850px){.family-grid{grid-template-columns:1fr}.family-card img{height:230px}}
+
+
+/* OUR STORY */
+.story-hero{max-width:1180px;margin:0 auto 35px;text-align:center}
+.story-hero .story-kicker{font-size:15px;letter-spacing:4px;color:#a66e59;margin-bottom:8px}
+.story-hero h2{font-size:58px;font-style:italic;color:#704936;margin-bottom:8px}
+.story-hero p{max-width:760px;margin:0 auto 24px;font-size:19px;line-height:1.65;font-style:italic;color:#8c6e5d}
+.story-poster-wrap{max-width:900px;margin:25px auto 45px;background:#fffaf2;padding:12px;border:1px solid #dcc8b0;border-radius:20px;box-shadow:0 14px 40px #6d50301c}
+.story-poster{display:block;width:100%;height:auto;border-radius:13px}
+.story-timeline{max-width:1000px;margin:0 auto;display:grid;gap:18px}
+
+.story-timeline .story-card .story-image {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
+}
+.story-card{position:relative;background:#fffaf2;border:1px solid #ddc9b1;border-radius:20px;padding:24px 28px 25px;box-shadow:0 9px 28px #6d50301a;overflow:hidden}
+.story-card:before{content:'♥';position:absolute;right:20px;top:15px;color:#d98975;font-size:22px;opacity:.75}
+.story-card .year{font-size:15px;letter-spacing:2px;color:#b36f56;font-weight:bold;text-transform:uppercase}
+.story-card h3{font-size:29px;font-style:italic;color:#704936;margin:5px 0 12px;padding-right:30px}
+.story-card p{font-size:17px;line-height:1.72;color:#765f50;white-space:pre-line}
+.story-card .quote{margin-top:15px;padding:12px 16px;background:#f2e3d3;border-left:4px solid #b8785c;border-radius:10px;color:#704936;font-style:italic}
+.story-final{max-width:900px;margin:42px auto 0;text-align:center;background:#30251f;color:#fff8ef;border-radius:22px;padding:45px 30px;box-shadow:0 14px 40px #3b2b221f}
+.story-final .big{font-size:34px;font-style:italic;margin-bottom:16px}
+.story-final .years{font-size:18px;letter-spacing:3px;color:#e6c9ae;margin-bottom:22px}
+.story-final p{font-size:19px;line-height:1.8;font-style:italic}
+.story-final .forever{display:block;font-size:34px;color:#f0b59d;margin-top:20px;font-style:italic}
+@media(max-width:850px){
+ .story-hero h2{font-size:46px}.story-poster-wrap{margin-bottom:30px}.story-card{padding:21px 20px}.story-card h3{font-size:25px}.story-card p{font-size:16px}.story-final{padding:35px 22px}
+}
+@media(max-width:520px){
+ .story-hero .story-kicker{font-size:11px;letter-spacing:2px}.story-hero h2{font-size:37px}.story-hero p{font-size:16px}.story-poster-wrap{padding:7px;border-radius:14px}.story-card{border-radius:16px}.story-card h3{font-size:23px}.story-card p{font-size:15px;line-height:1.65}.story-final .big{font-size:27px}.story-final p{font-size:16px}.story-final .forever{font-size:29px}
+}
+
+/* Desktop, tablet and mobile support */
+html,body{min-height:100%;width:100%;}
+img{max-width:100%;height:auto;}
+button{min-height:44px;touch-action:manipulation;}
+@media (min-width:521px) and (max-width:1024px){
+  .sidebar{width:220px;padding:22px 12px;}
+  .brand h1{font-size:22px}.brand .small{font-size:16px}
+  main{margin-left:220px}
+  .page{padding:34px 28px 70px}
+  .hero h2{font-size:54px}.hero .script{font-size:62px}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .family-grid{grid-template-columns:repeat(2,1fr)}
+  .family-card img{height:220px}
+}
+@media (max-width:520px){
+  .sidebar{width:64px;padding-left:6px;padding-right:6px}
+  main{margin-left:64px;width:calc(100% - 64px)}
+  .page{min-height:100svh}
+  .nav button{min-height:48px}
+  .family-card img{height:210px}
+  .family-caption h3{font-size:23px}
+}
+
+</style>
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="brand">
+    <div class="cake">🎂</div>
+    <h1>My Love <br><span class="heart">❤️</span></h1>
+    <div class="small">Happy Birthday<br><span>from Sufi 💗</span></div>
+  </div>
+  <nav class="nav">
+    <button class="active" data-page="home">♡ <span>Home</span><span class="dot">•</span></button>
+    <button data-page="story">💌 <span>Our Story</span></button>
+    <!--<button data-page="gallery">▧ <span>Gallery</span></button>-->
+    <button data-page="family">👨‍👩‍👧‍👦 <span>Family</span></button>
+    <button data-page="songs">♫ <span>Songs</span></button>
+    <button data-page="games">♧ <span>Games</span></button>
+    <button data-page="surprise">🎁 <span>Surprise</span></button>
+  </nav>
+</aside>
+
+<main>
+<section class="page" id="home">
+  <div class="flowers fl1">🌸</div><div class="flowers fl2">🌺</div>
+  <div class="hero">
+    <div class="kicker">A LITTLE CELEBRATION OF YOU</div>
+    <h2>HAPPY</h2><span class="script"> Birthday</span>
+    <div class="name">ASHU PAL(My Love) | CA FINALIST 💗🌸</div>
+    <div class="polaroid-wrap">
+      <div class="polaroid small1 placeholder"></div>
+      <div class="polaroid small placeholder"></div>
+      <div class="polaroid small2 placeholder"></div>
+    </div>
+    <p class="message"><strong>Happy Birthday to my Love ❤️🎂</strong><br><br>
+    I honestly don't know how to put into words how special you are to me.
+    You're not just my girlfriend; you're someone who has become such an important
+    part of my life. Your smile, your little things, the way you care, and even
+    the way you get stressed over your CA Final sometimes — I love all of it because it's you. ❤️
+    </p>
+  </div>
+</section>
+
+<section class="page" id="story">
+  <div class="flowers fl1">🌸</div><div class="flowers fl2">💗</div>
+  <div class="story-hero">
+    <div class="story-kicker">2015 → 2026 • OUR LITTLE FOREVER</div>
+    <h2>Our Story ❤️</h2>
+    <p>
+      Some people enter your life quietly… and somehow become your whole world.
+      This is not just a collection of memories. This is our journey — from a library,
+      a first look and a late-night SMS to dreams, distance, difficult nights and a love
+      that still chooses each other.
+    </p>
+  </div>
+
+  <div class="story-poster-wrap">
+    <img class="story-poster" src="images/our-story-poster.png" alt="Ashu and Sufi love story from 2015 to 2026">
+  </div>
+
+  <div class="story-timeline">
+    <article class="story-card">
+      <div class="year">2015</div>
+          <img src="images/old1.jpg"
+
+         class="story-image">
+
+      <h3>The First Look — Ek Nazar, Aur Dil Haar Gaya</h3>
+      <p>Hum dono board exams ki preparation ke liye library aate the. Tum 10th ke boards ke liye aur main 12th ke boards ke liye.
+
+Ek din meri nazar tumhari aankhon par padi… aur pata nahi kyun, dil wahi ruk sa gaya. Us din ke baad library sirf padhne ki jagah nahi rahi. Main tumhe dekhne ke liye bhi roz library aane laga.</p>
+      <div class="quote">“That one look… changed everything.” ❤️</div>
+    </article>
+
+    <article class="story-card">
+          <img src="images/clg_meet.jpg"
+         alt="The first look"
+         class="story-image">
+      <h3>Waiting Until Midnight — Your Message Was My Favourite Notification</h3>
+      <p>Us waqt tumhare paas apna mobile bhi nahi tha. Kabhi didi ke number se, kabhi mummy ke number se normal SMS par baat hoti thi.
+
+Main raat ke 12 baje tak tumhare message ka wait karta tha. Aur jab tumhara message aata tha, lagta tha jaise poori raat meri ho gayi.</p>
+      <div class="quote">“Those late-night conversations were the beginning of our forever.” 💗</div>
+    </article>
+
+    <article class="story-card">
+      <div class="year">21 February 2016</div>
+      
+          <img src="images/family-1.svg"
+         alt="The first look"
+         class="story-image">
+      <h3>The YES — The Day I Found My Forever</h3>
+      <p>2016 mein Facebook par baat aur zyada hone lagi. Phir aaya woh din jo meri life ke sabse special days mein se ek hai.
+
+21 February 2016 ko maine tumse apne dil ki baat keh di… aur tumne YES bol diya.
+
+Us ek “YES” ne meri duniya ko aur khoobsurat bana diya.</p>
+      <div class="quote">“That day… I didn't just get a YES. I found someone I wanted beside me.” ❤️</div>
+    </article>
+
+    <article class="story-card">
+      <div class="year">2016 – 2018</div>
+      
+          <img src="images/togather.jpg"
+         alt="The first look"
+         class="story-image">
+      <h3>Different Colleges, Same Love</h3>
+      <p>Humne different colleges mein admission liya, lekin distance humare beech kabhi dilon ka distance nahi bana.
+
+Hum milte rahe, baatein karte rahe aur chhoti-chhoti moments ko memories banate rahe. Journey alag thi, lekin dil ek hi direction mein tha.</p>
+      <div class="quote">“Different paths… same destination — together.”</div>
+    </article>
+
+    <article class="story-card">
+      <div class="year">2018 – 2019</div>
+    
+          <img src="images/ca.jpg"
+         alt="The first look"
+         class="story-image">
+      <h3>Her CA Dream — Your Dream Became My Pride</h3>
+      <p>Phir tumne CA banne ka decision liya. Tumhari padhai tumhari priority ban gayi. Library mein pehle jaisi baatein nahi hoti thi — 7–8 PM tak mostly sirf study.
+
+Maine bhi seekha ki pyaar sirf saath waqt bitana nahi hota. Kabhi-kabhi pyaar ka matlab hota hai saamne wale ke dream ko samajhna, uske liye wait karna aur uski success ke liye dil se proud hona.</p>
+      <div class="quote">“Your dream became my responsibility, my prayer and my pride.” 📚❤️</div>
+    </article>
+
+    <article class="story-card">
+      <div class="year">2019</div>
+       
+          <img src="images/IMG_20230711_123708744.jpg"
+         alt="The first look"
+         class="story-image">
+      <h3>CA Foundation — I Cheered, You Worked Hard</h3>
+      <p>Tumne CA Institute ka form bhara aur Foundation exam diya. Tum apne dream ki taraf ek-ek step leti gayi.
+
+Main har step mein tumhare saath tha — kabhi saamne, kabhi door se, lekin hamesha tumhare liye cheer karta aur dua karta raha.</p>
+      <div class="quote">“You studied hard… I prayed harder.” ❤️</div>
+    </article>
+
+    <article class="story-card">
+      <div class="year">Articleship — 3 Years</div>
+       
+          <img src="images/IMG_20200310_080019.jpg"
+         alt="The first look"
+         class="story-image">
+      <h3>The Little Things I Still Miss — Tiffin & Your Maggi ❤️</h3>
+      <p>IPCC ke baad tumhari 3 years ki articleship shuru hui. Career aur responsibilities badh gayi, time kam hota gaya… lekin tum meri wahi library wali Ashu rahi.
+
+Aur tumhara mere liye tiffin lana… aur tumhare haath ki Maggi — WOW! 😄❤️
+
+Aaj bhi miss karta hoon. Kyunki woh sirf Maggi nahi thi. Usmein tumhara care, tumhara effort aur tumhara pyaar tha.</p>
+      <div class="quote">“Your Maggi was never just food… it was love served in a little bowl.” 🍜❤️</div>
+    </article>
+
+    <article class="story-card">
+      <div class="year">2020</div>
+    
+          <img src="images/IMG_20230711_124107784.jpg"
+         alt="The first look"
+         class="story-image">
+      <h3>Lockdown — Distance Couldn't Break Us</h3>
+      <p>Corona aaya aur poori duniya ruk gayi. Hum mil nahi paate the, lekin humari baatein nahi ruki.
+
+Mobile screen hi humari mulaqat ban gayi. Us waqt samajh aaya ki saath rehna sirf paas rehna nahi hota.</p>
+      <div class="quote">“The world stopped… but my heart still found you.” ❤️</div>
+    </article>
+
+    <article class="story-card">
+      <div class="year">2021 – 2022</div>
+       
+          <img src="images/outDay.jpg"
+         alt="The first look"
+         class="story-image">
+      <h3>After Corona — Every Meeting Became a Memory</h3>
+      <p>Sab normal hone laga toh hum phir milne lage. Gardens mein, ghar se door, thoda sa waqt chura kar.
+
+Problems thi, distance tha, restrictions thi… lekin tumse milne ka har moment worth it lagta tha.</p>
+      <div class="quote">“The meetings were short, but the memories stayed long.” 🌳❤️</div>
+    </article>
+
+    <article class="story-card">
+      <div class="year">A Night We Almost Lost Us</div>
+      <img src="images/gorai.jpg"
+         alt="The first look"
+         class="story-image">
+      <h3>The Night I Couldn't Sleep — Because I Couldn't Lose You</h3>
+      <p>Diwali ke time tumhare bhai ne humein saath dekh liya. Us raat tumhara message aaya ki shayad ab hum saath nahi reh sakte aur breakup karna hai.
+
+Woh raat main soya nahi. Main tumhe samjhata raha, explain karta raha, bas isliye kyunki dil mein ek hi baat thi — main tumhe khona nahi chahta tha.
+
+Humne mushkil waqt dekha, roye, dare… lekin phir ek baar humne ek-dusre ko choose kiya.</p>
+      <div class="quote">“We didn't have a perfect story. We had a real one — and we kept choosing each other.” 💔➡️❤️</div>
+    </article>
+
+    <article class="story-card">
+      <div class="year">Two Faiths, One Love</div>
+      <img src="images/Snapchat-267637440.jpg"
+         alt="The first look"
+         class="story-image">
+      <h3>Different Faiths — Same Respect, Same Love</h3>
+      <p>Main Muslim hoon, tum Hindu ho. Kabhi-kabhi future ko lekar confusion hoti hai, questions aate hain aur darr bhi lagta hai.
+
+Lekin humne ek-dusre ke faith ko change karne ki jagah ek-dusre ko samajhna seekha.
+
+Hum ek-dusre ke birthdays par Mandir aur Dargah jaate hain — do different places, lekin dil se ek hi dua: khushi, peace aur saath.</p>
+      <div class="quote">“Different faiths… same prayers… same love.” 🕌🛕❤️</div>
+    </article>
+
+    <article class="story-card">
+      <div class="year">2026</div>
+      <img src="images/y1.jpg"
+         alt="The first look"
+         class="story-image">
+      <h3>CA Final — I Will Wait For Your Dream</h3>
+      <p>Aaj tum CA Final ki preparation mein busy ho. Pehle jaisa time nahi mil pata. Kabhi family ke saath trip par hoti ho, kabhi studies mein busy hoti ho aur baat nahi ho pati.
+
+Haan, main tumhe miss karta hoon. Bahut karta hoon.
+
+Lekin main tumhare busy time mein bhi tumse utna hi pyaar karta hoon jitna tumhare free time mein. Tum apna dream complete karo. Main wait karunga.</p>
+      <div class="quote">“Go get your dream, Ashu. I’ll always be here — cheering for you.” 📚❤️</div>
+    </article>
+
+    <article class="story-card">
+      <div class="year">Every Morning • Every Day</div>
+      <h3>You Are My First Thought</h3>
+      <p>Subah aankh khulti hai toh sabse pehle tum yaad aati ho.
+
+Office jaata hoon toh tum yaad aati ho.
+
+Din mein kuch achha hota hai toh tumse share karne ka mann karta hai.
+
+Aur jab tum family ke saath trip par hoti ho aur baat nahi karti… tab aur zyada samajh aata hai ki tum meri life ka kitna bada hissa ho.</p>
+      <div class="quote">“You are my first thought, my every thought, and somehow… my last thought too.” ☀️❤️</div>
+    </article>
+  </div>
+
+  <div class="story-final">
+    <div class="years">2015 → 2026</div>
+    <img src="images/with_trip.jpg"
+         alt="The first look"
+         class="story-image">
+    <div class="big">11 Years. Thousands of memories. One person.</div>
+    <p>
+      I don't know what the future holds…<br>
+      but I know who I want beside me when I find out.<br><br>
+      Thank you for being you, Ashu — for your love, your dreams, your strength,
+      your kindness, and for choosing me again and again.
+      <br><br>
+      2015 mein tum meri ek beautiful memory bani thi…<br>
+      aur 2026 mein tum meri sabse beautiful story ho.
+      <br><br>
+      I will keep waiting, supporting, praying and loving you —
+      not just today, but through every chapter that comes next.
+    </p>
+    <span class="forever">I love you… today, tomorrow & always. ♾️❤️</span>
+  </div>
+</section>
+
+<!--<section class="page" id="gallery">
+  <div class="flowers fl1">🌸</div>
+  <h2 class="section-title">Memory Gallery</h2>
+  <p class="section-sub">A scrapbook of joy — click a memory to enlarge</p>
+  <div class="gallery">
+    <div class="card big" onclick="openModal(this)"><div class="placeholder">💍 Wedding / Special Memory</div></div>
+    <div class="card" onclick="openModal(this)"><div class="placeholder">🌅 Beautiful Moments</div></div>
+    <div class="card" onclick="openModal(this)"><div class="placeholder">💕 Together Forever</div></div>
+    <div class="card" onclick="openModal(this)"><div class="placeholder">🌸 Cherished Memories</div></div>
+    <div class="card" onclick="openModal(this)"><div class="placeholder">✨ Joy & Laughter</div></div>
+    <div class="card" onclick="openModal(this)"><div class="placeholder">❤️ Love & Happiness</div></div>
+  </div>
+  <p class="gallery-note">Every photo tells a story.</p>
+</section>-->
+
+<section class="page" id="family">
+  <div class="flowers fl1">🌸</div><div class="flowers fl2">🌺</div>
+  <h2 class="section-title">Family ❤️</h2>
+  <p class="section-sub">The people who make every moment more special</p>
+  <div class="family-grid">
+    <article class="family-card"><img src="images/family-1.png" alt="Family photo 1"><div class="family-caption"><h3>Sisters by Heart ❤️</h3><p>
+     Behenon ke beech ka ek khoobsurat rishta — jo pyaar, hasi-mazaak aur anagint yaadon se bhara hota hai. ❤️ Chhoti-chhoti khushiyan saath baantne se lekar zindagi ke sabse khaas palon mein ek-doosre ke saath khade rehne tak, behen ka yeh rishta sach mein bahut anmol hota hai.
+
+Zindagi chahe kitni bhi badal jaaye, behenon ke beech ka pyaar hamesha dil ke kareeb rehta hai. ❤️✨</p></div></article>
+    <article class="family-card"><img src="images/family-2.png" alt="Family photo 2"><div class="family-caption"><h3>A Mother’s Love, A Daughter’s World</h3>
+   <p> Ek aisa rishta jo pyaar se shuru hota hai aur har pal ke saath aur bhi gehra hota jaata hai. ❤️ Maa apni beti ka pehla ghar hoti hai, uski sabse badi taaqat aur hamesha pyaar dene wali ek khoobsurat jagah.
+Kuch rishte sirf khoon se nahi bante, balki anagint yaadon, bepanah care aur us pyaar se bante hain jo zindagi bhar dil mein bana rehta hai. ❤️✨</p></div></article>
+    <article class="family-card"><img src="images/family-3.png" alt="Family photo 3"><div class="family-caption"><h3>Our Little Princess ❤️</h3><p>Bhanji ghar ki woh chhoti si khushi hoti hai jo apni masoomiyat, cute si smile aur pyaari si baaton se poore ghar ko khushiyon se bhar deti hai. ❤️ Uske saath bitaya har chhota sa pal ek beautiful memory ban jaata hai. Chahe woh kitni bhi badi ho jaaye, hamare liye woh hamesha hamari chhoti si princess hi rahegi. 🥰✨</p></div></article>
+    <article class="family-card"><img src="images/family-4.png" alt="Family photo 4"><div class="family-caption"><h3>A Mother’s Love, Forever Home</h3><p>Mom sirf ek rishta nahi, balki woh ehsaas hai jahan har dard mein sukoon, har mushkil mein himmat aur har khushi mein sabse pehli muskaan milti hai. ❤️ Unki mamta, unki duaayein aur unka bina kahe samajh lena zindagi ki sabse khoobsurat cheezon mein se ek hai. Chahe waqt kitna bhi badal jaaye, Maa ka pyaar hamesha dil mein wahi rahega — sabse khaas, sabse kareeb. 🥹❤️</p></div></article>
+    <article class="family-card"><img src="images/family-5.png" alt="Family photo 5"><div class="family-caption"><h3>❤️ Family, Love & Togetherness</h3><p>
+  Family ke kuch pal bahut simple hote hain, lekin wahi pal hamari zindagi ki
+  sabse khoobsurat yaadein ban jaate hain, jinhe hum hamesha apne dil mein
+  sambhal kar rakhte hain. ❤️ Bhai-behen ka rishta chhoti-chhoti nok-jhok,
+  bepanah hasi, ek-doosre ki care aur us pyaar se bhara hota hai jise aksar
+  lafzon mein kehne ki zarurat hi nahi padti. ❤️
+</p>
+
+<p>
+  Aur jab Mosi bhi hamare saath hoti hain, toh ye pal aur bhi zyada khaas
+  ban jaate hain. ❤️ Ye wahi log hain jo family ko sirf ek rishta nahi,
+  balki ek ghar jaisa ehsaas banate hain — jahan hum saath muskurate hain,
+  ek-doosre ka khayal rakhte hain aur aisi khoobsurat yaadein banate hain
+  jinhe hum hamesha pyaar se yaad karenge. ❤️✨
+</p></div></article>
+    <article class="family-card"><img src="images/family-6.png" alt="Family photo 6"><div class="family-caption"><h3>Forever ❤️ Together</h3>
+  <p>Family sirf ek picture mein saath hone ka naam nahi hai, balki yeh us pyaar,
+  hasi, chhoti-chhoti khushiyon aur un khoobsurat yaadon ka naam hai jo hum
+  saath milkar banate hain. ❤️ Yeh wahi pal hain jinhe hum aane wale waqt mein
+  muskurate hue yaad karenge — kyunki zindagi humein chahe kahin bhi le jaaye,
+  family ka pyaar hamesha humein apne ghar aur apno ke paas wapas le aayega. ❤️
+</p>
+
+<p>
+  Hamare is khoobsurat family, anagint yaadon aur un sabhi apno ke naam,
+  jo hamari zindagi ko sach mein special banate hain. ❤️
+  Bas yahi dua hai ki hamara saath hamesha bana rahe, hum hamesha saath
+  muskurate rahein aur milkar aisi hi bahut saari khoobsurat yaadein banate rahein,
+  jinhe hum zindagi bhar apne dil mein sambhal kar rakh sakein. ❤️✨
+</p></div>
+</section>
+
+<section class="page" id="songs">
+  <h2 class="section-title">Our Songs 🎵</h2>
+  <p class="section-sub">Tap any song to play your birthday playlist</p>
+  <div class="song-box">
+    <div class="now">
+      <div class="album">🎵</div>
+      <div><h3 id="songTitle">Select a song</h3><p id="songArtist">Your playlist</p></div>
+    </div>
+    <div class="controls">
+      <button onclick="prevSong()">⏮</button>
+      <button class="main" onclick="togglePlay()" id="playBtn">▶</button>
+      <button onclick="nextSong()">⏭</button>
+    </div>
+    <input class="progress" id="progress" type="range" min="0" max="100" value="0">
+    <div class="playlist" id="playlist"></div>
+    <audio id="audio"></audio>
+  </div>
+</section>
+
+<section class="page" id="games">
+  <h2 class="section-title">Little Love Game 💕</h2>
+  <p class="section-sub">Catch all the hearts!</p>
+  <div class="game-wrap">
+    <div class="game-card">
+      <div class="hearts" id="hearts"></div>
+      <div id="gameMsg">Click every heart ❤️</div>
+      <button class="game-btn" onclick="newGame()">Start Again</button>
+    </div>
+  </div>
+</section>
+
+<section class="page surprise-page" id="surprise">
+  <h2 class="section-title">A Little Surprise 🎁</h2>
+  <p class="section-sub">Scratch the card with your mouse or finger</p>
+  <div class="scratch-area">
+    <div class="scratch-message">
+      <h3>For My Ashu ❤️</h3>
+      <p>
+        May this year bring you closer to every dream you're working for.
+        I hope you clear your CA Final, achieve everything you deserve,
+        and always keep that beautiful smile on your face. 🌸
+        <br><br><strong>I love you. Happy Birthday! ❤️</strong>
+      </p>
+    </div>
+    <canvas id="scratchCanvas"></canvas>
+  </div>
+  <p class="scratch-hint">✨ Scratch away the cover to reveal your message ✨</p>
+  <div class="reveal" id="reveal"><button onclick="celebrate()">Celebrate again 🎉</button></div>
+</section>
+</main>
+
+<div id="confetti"></div>
+<div class="modal" id="modal" onclick="closeModal(event)">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <div id="modalContent"></div>
+    <button class="close" onclick="closeModal()">Close</button>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* =========================
+   PAGE NAVIGATION
+========================= */
+const navButtons=document.querySelectorAll('.nav button');
+const pages=document.querySelectorAll('.page');
+function showPage(id){
+  pages.forEach(p=>p.style.display=p.id===id?'block':'none');
+  navButtons.forEach(b=>b.classList.toggle('active',b.dataset.page===id));
+  if(id==='surprise') setTimeout(initScratch,50);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+navButtons.forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+showPage('home');
+
+/* =========================
+   GALLERY MODAL
+========================= */
+function openModal(card){
+  const content=card.querySelector('.placeholder');
+  document.getElementById('modalContent').innerHTML='<div style="font-size:80px">'+content.textContent.trim().slice(0,2)+'</div><h2 style="margin-top:10px;font-style:italic">'+content.textContent.trim().slice(2)+'</h2>';
+  document.getElementById('modal').classList.add('show');
+}
+function closeModal(){document.getElementById('modal').classList.remove('show')}
+
+/* =========================
+   MUSIC PLAYLIST
+   Put your MP3 files in the same folder as this HTML,
+   or change the "file" values below.
+========================= */
+const songs=[
+ {title:"Perfect",artist:"Birthday Love Song",file:"songs/WhatsApp Audio 2026-10-09 at 7.40.03 PM..mpeg"},
+ {title:"Until I Found You",artist:"For My Ashu",file:"songs/WhatsApp Audio 2026-10-09 at 7.40.03 PM..mpeg"},
+ {title:"Ek Tu, Ek Main, Aur Hamara Pyaar 💕",artist:"Duniya chahe kitni bhi badal jaaye, meri har kahani ka sabse khoobsurat hissa hamesha tum hi rahogi. ❤️✨",file:"songs/SUNONA.mp3"},
+ {title:"Jag Ghoomeya Thare Jaisa Naa koi",artist:"❤️",file:"songs/song1.mp3"}
+];
+let currentSong=0,playing=false;
+const audio=document.getElementById('audio');
+const playlist=document.getElementById('playlist');
+function renderPlaylist(){
+ playlist.innerHTML=songs.map((s,i)=>`<div class="track ${i===currentSong?'active':''}" onclick="loadSong(${i},true)">
+   <div class="track-num">${i+1}</div><div class="track-info"><strong>${s.title}</strong><span>${s.artist}</span></div><div>▶</div>
+ </div>`).join('');
+}
+function loadSong(i,autoplay=false){
+ currentSong=i; const s=songs[i]; audio.src=s.file;
+ document.getElementById('songTitle').textContent=s.title;
+ document.getElementById('songArtist').textContent=s.artist;
+ renderPlaylist();
+ if(autoplay){audio.play().then(()=>{playing=true;updatePlay()}).catch(()=>showToast('Add your MP3 files to the songs folder first.'))}
+}
+function togglePlay(){
+ if(!audio.src) loadSong(currentSong,false);
+ if(audio.paused) audio.play().then(()=>{playing=true;updatePlay()}).catch(()=>showToast('Add your MP3 files to the songs folder first.'));
+ else {audio.pause();playing=false;updatePlay()}
+}
+function updatePlay(){document.getElementById('playBtn').textContent=audio.paused?'▶':'Ⅱ'}
+function nextSong(){loadSong((currentSong+1)%songs.length,true)}
+function prevSong(){loadSong((currentSong-1+songs.length)%songs.length,true)}
+audio.addEventListener('timeupdate',()=>{if(audio.duration) document.getElementById('progress').value=audio.currentTime/audio.duration*100});
+audio.addEventListener('ended',nextSong);
+document.getElementById('progress').addEventListener('input',e=>{if(audio.duration)audio.currentTime=e.target.value/100*audio.duration});
+renderPlaylist();loadSong(0);
+
+/* =========================
+   HEART GAME
+========================= */
+function newGame(){
+ const box=document.getElementById('hearts');box.innerHTML='';
+ document.getElementById('gameMsg').textContent='Click every heart ❤️';
+ for(let i=0;i<8;i++){
+   const s=document.createElement('span');s.className='heart-game';s.textContent=['❤️','💗','💖','💕'][i%4];
+   s.onclick=()=>{s.style.visibility='hidden';if(!box.querySelector('.heart-game:not([style*="hidden"])')){document.getElementById('gameMsg').textContent='You caught them all! I love you, Ashu! 💕';celebrate()}};
+   box.appendChild(s);
+ }
+}
+newGame();
+
+/* =========================
+   SCRATCH CARD
+========================= */
+let scratchReady=false;
+function initScratch(){
+ const c=document.getElementById('scratchCanvas'),wrap=document.querySelector('.scratch-area');
+ const rect=wrap.getBoundingClientRect();
+ const dpr=window.devicePixelRatio||1;
+ c.width=rect.width*dpr;c.height=rect.height*dpr;
+ c.style.width=rect.width+'px';c.style.height=rect.height+'px';
+ const ctx=c.getContext('2d');ctx.scale(dpr,dpr);
+ ctx.globalCompositeOperation='source-over';
+ const grad=ctx.createLinearGradient(0,0,rect.width,rect.height);
+ grad.addColorStop(0,'#b58a6b');grad.addColorStop(.5,'#d4b397');grad.addColorStop(1,'#9b6c52');
+ ctx.fillStyle=grad;ctx.fillRect(0,0,rect.width,rect.height);
+ ctx.fillStyle='rgba(255,248,235,.75)';ctx.font='italic 28px Georgia';ctx.textAlign='center';
+ ctx.fillText('SCRATCH HERE ❤️',rect.width/2,rect.height/2);
+ let drawing=false,last=0;
+ function point(e){const r=c.getBoundingClientRect();const p=e.touches?e.touches[0]:e;return{x:p.clientX-r.left,y:p.clientY-r.top}}
+ function scratch(e){if(!drawing)return;e.preventDefault();const p=point(e);ctx.globalCompositeOperation='destination-out';ctx.beginPath();ctx.arc(p.x,p.y,27,0,Math.PI*2);ctx.fill();checkScratch()}
+ c.onpointerdown=e=>{drawing=true;scratch(e)};c.onpointermove=scratch;c.onpointerup=()=>drawing=false;c.onpointerleave=()=>drawing=false;
+ scratchReady=true;
+}
+function checkScratch(){
+ const c=document.getElementById('scratchCanvas'),ctx=c.getContext('2d');
+ const data=ctx.getImageData(0,0,c.width,c.height).data;let clear=0;
+ for(let i=3;i<data.length;i+=32) if(data[i]<40)clear++;
+ if(clear>data.length/32*.58){c.style.display='none';document.getElementById('reveal').classList.add('show');celebrate()}
+}
+
+/* =========================
+   CONFETTI / SURPRISE
+========================= */
+function celebrate(){
+ const box=document.getElementById('confetti');box.innerHTML='';
+ const shapes=['●','■','♥','✦','◆'];
+ for(let i=0;i<75;i++){
+   const x=document.createElement('div');x.className='conf';x.textContent=shapes[i%shapes.length];
+   x.style.left=Math.random()*100+'%';x.style.fontSize=(8+Math.random()*12)+'px';
+   x.style.animationDuration=(2.5+Math.random()*2.5)+'s';x.style.animationDelay=(Math.random()*.7)+'s';
+   x.style.transform=`rotate(${Math.random()*360}deg)`;
+   box.appendChild(x);
+ }
+ setTimeout(()=>box.innerHTML='',6000);
+}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.style.display='block';setTimeout(()=>t.style.display='none',3000)}
+window.addEventListener('resize',()=>{if(document.getElementById('surprise').style.display!=='none')initScratch()});
+</script>
+</body>
+</html>
